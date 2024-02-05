@@ -16,5 +16,5 @@ jobs:
         with:
           fetch-depth: 0
 
-          #      - run: "git push origin main:rel/Test-2.5.0"
-      - run: " git status" 
+      - run: "git push origin main:rel/Test-2.5.0"
+        #      - run: " git status" 
