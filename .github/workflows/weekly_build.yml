@@ -13,7 +13,5 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - run: "git push origin main:rel/Test-2.5.0"
