@@ -1,0 +1,19 @@
+name: Push main to rel
+
+on:
+  schedule:
+      - cron:  '* * * * *'
+
+jobs:
+  build:
+    name: Push to rel
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: "git push origin main:rel/Test-2.5.0"
